@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rive Animation</title>
+    <script src="https://unpkg.com/@rive-app/canvas@latest"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="riveCanvas" width="600" height="400"></canvas>
+    
+    <script>
+        const r = new rive.Rive({
+            src: "naveenyadav.riv", // Ensure this file is in the same directory
+            canvas: document.getElementById("riveCanvas"),
+            autoplay: true,
+            stateMachines: "State Machine 1", // Change if your animation has a different state machine
+            onLoad: () => {
+                console.log("Rive animation loaded successfully");
+            }
+        });
+    </script>
+</body>
+</html>
